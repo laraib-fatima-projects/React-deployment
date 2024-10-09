@@ -12,7 +12,11 @@
         }
     }
 
-
+    .chart-dots {
+        @media (max-width:991px) {
+            top: 10px;
+        }
+    }
 
     .recharts-responsive-container {
 
