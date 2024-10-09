@@ -42,3 +42,9 @@
     right: 16px;
     margin-bottom: 0;
 }
+
+@media (max-width:991px) {
+    tspan {
+        display: none;
+    }
+}
