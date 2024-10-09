@@ -7,11 +7,12 @@
 
     @media (max-width:991px) {
         background-color: map-get($colors, 'tint');
-
+        position: relative;
         bottom: 0;
         width: 100%;
         left: 0;
         padding: 0 19px;
+        margin-top: 12px;
     }
 
     @media (max-width:425px) {
