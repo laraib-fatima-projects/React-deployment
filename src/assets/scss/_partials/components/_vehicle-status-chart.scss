@@ -6,6 +6,10 @@
         top: 21px;
         left: 16px;
         margin-bottom: 0;
+
+        @media (max-width:991px) {
+            top: 15px;
+        }
     }
 
 
@@ -41,4 +45,8 @@
     top: 21px;
     right: 16px;
     margin-bottom: 0;
+}
+
+.rechart-legend-wrapper {
+    padding: 12px;
 }
