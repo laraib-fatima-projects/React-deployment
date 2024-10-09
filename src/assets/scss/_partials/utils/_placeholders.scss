@@ -1,0 +1,35 @@
+@use "./variables" as *;
+
+%input-alignment {
+    border: 1px solid map-get($colors, 'border');
+    border-radius: 5px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14px;
+
+
+
+}
+
+%button-styles {
+    font-size: 14px;
+    box-shadow: 0px 0px 8px map-get($colors, 'box-shadow');
+    border-radius: 4px;
+    padding: 6px 23px;
+    border: none;
+    color: $tint;
+    cursor: pointer;
+
+}
+
+%hr {
+
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    border: 1px solid;
+    width: 89%;
+    bottom: 52px;
+
+}

@@ -1,0 +1,54 @@
+@use '../utils/index' as *;
+
+.header {
+    margin-top: 20px;
+
+    button {
+        background-color: map-get($colors, 'secondary');
+    }
+
+    h2 {
+        color: map-get($colors, 'secondary');
+    }
+
+    .view-toggle-buttons {
+        background: map-get($colors, 'tint');
+        border: none;
+        padding: 2px;
+        border-radius: 9px;
+
+        button {
+            padding: 4px 8px;
+            background-color: map-get($colors, 'tint');
+            border: none;
+
+            svg {
+                path {
+                    fill: map-get($colors, 'icon-color');
+                }
+            }
+
+            &:hover {
+                background-color: map-get($colors, 'tint');
+            }
+
+            &.active {
+                background-color: map-get($colors, 'icon-color');
+
+                svg {
+                    path {
+                        fill: map-get($colors, 'tint');
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width:1024px) {
+        margin-top: 0px;
+    }
+
+    @media (max-width:991px) {
+        margin-top: 53px;
+    }
+}

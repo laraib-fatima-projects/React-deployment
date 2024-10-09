@@ -1,0 +1,191 @@
+@use '../utils/index' as *;
+
+.sidebar {
+    width: 240px;
+    height: 99vh;
+    color: map-get($colors, 'primary');
+    box-shadow: 2px 0 8px $box-shadow;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    transition: width 0.3s ease;
+    overflow: hidden;
+
+    &.collapsed {
+        width: 60px;
+
+        .menu-text,
+        .logo-text,
+        .logo-svg,
+        .notifications,
+        hr {
+            display: none;
+        }
+
+
+    }
+
+    .sidebar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+        background-color: map-get($colors, 'primary');
+        padding: 17px 18px;
+
+        .logo {
+            display: flex;
+            align-items: center;
+
+            i {
+                font-size: 24px;
+                color: map-get($colors, 'primary');
+            }
+
+            .logo-text {
+                font-size: 18px;
+                color: map-get($colors, 'tint');
+                margin-left: 10px;
+                font-weight: 400;
+            }
+        }
+
+        .hamburger-btn {
+            background: none;
+            padding: 0;
+            border: none;
+            cursor: pointer;
+
+            i {
+                font-size: 24px;
+                color: map-get($colors, 'icon-color');
+            }
+        }
+    }
+
+    .menu {
+
+        padding: 0 23px;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+                padding: 10px 0;
+                font-weight: 400;
+                cursor: pointer;
+                transition: background 0.3s ease;
+                border-bottom: 1px solid $border;
+
+
+
+                &:hover {
+                    background-color: map-get($colors, 'tint');
+                }
+
+                i {
+                    font-size: 20px;
+                    color: map-get($colors, 'primary');
+                }
+
+                .menu-text {
+                    margin-left: 7px;
+                    font-size: 14px;
+                    margin-top: 5px;
+
+                    color: map-get($colors, 'sidebar-text');
+
+                    &.active {
+                        color: map-get($colors, 'primary');
+                    }
+                }
+            }
+        }
+    }
+
+    hr {
+        position: absolute;
+        bottom: 0;
+        right: 22px;
+        border: 1px solid;
+        width: 79%;
+        bottom: 6px;
+
+        @media (max-width:991px) {
+            width: 91%;
+        }
+    }
+
+    .notifications {
+        display: flex;
+        align-items: center;
+        padding: 10px 5px 0px 28px;
+        background-color: map-get($colors, 'tint');
+        border-radius: 8px;
+        position: absolute;
+        bottom: 33px;
+        width: 91%;
+
+        i {
+            font-size: 20px;
+            color: map-get($colors, 'primary');
+        }
+
+        .notification-text {
+            margin-left: 10px;
+            color: map-get($colors, 'icon-color');
+            font-size: 14px;
+        }
+
+        .notification-count {
+            margin-left: 37px;
+
+            background-color: map-get($colors, 'primary');
+            color: map-get($colors, 'tint');
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 14px;
+        }
+    }
+
+
+
+    @media (max-width:991px) {
+
+        height: 56px;
+        width: 100%;
+        position: fixed;
+        z-index: 9999;
+        top: 0px;
+        background: map-get($colors, 'tint');
+        transition: height 0.3s ease;
+
+        &.collapsed {
+            width: 100%;
+            position: fixed;
+            z-index: 9999;
+            top: 0px;
+            background: map-get($colors, 'tint');
+            height: 100vh;
+
+
+            .menu-text,
+            .logo-text,
+            .logo-svg,
+            .notifications,
+            hr {
+                display: flex;
+            }
+        }
+
+        .notifications,
+        hr {
+            display: none;
+        }
+    }
+
+}

@@ -1,0 +1,5 @@
+@use "./variables" as *;
+
+@function get-color($type, $name) {
+    @return map-get(($colors, $type));
+}

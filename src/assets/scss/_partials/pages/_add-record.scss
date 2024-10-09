@@ -1,0 +1,65 @@
+@use '../utils/index' as *;
+
+
+.add-record {
+    display: flex;
+    justify-content: space-between;
+
+
+
+    .responsive-cards {
+        flex: 1;
+
+        @media (max-width:768px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    .cards-container {
+        width: 100%;
+
+        padding: 20px 60px;
+        background-color: map-get($colors, 'bg-color');
+        height: 99vh;
+
+        .card-generation {
+            overflow: auto;
+            max-height: 95%;
+            scrollbar-width: none;
+        }
+
+        .create-records-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h2 {
+                color: map-get($colors , 'secondary');
+            }
+
+            button {
+                background-color: map-get($colors, 'secondary');
+                height: fit-content;
+            }
+
+            @media (max-width:991px) {
+                margin-top: 53px;
+            }
+        }
+
+        @media (max-width:1024px) {
+            padding: 20px;
+        }
+
+        @media (max-width:991px) {
+            height: fit-content;
+        }
+    }
+
+    .inventory-container {
+        @media (max-width:768px) {
+            width: 100%;
+        }
+    }
+
+}

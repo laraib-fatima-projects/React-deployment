@@ -1,0 +1,124 @@
+@use '../utils/index' as *;
+
+.inventory-manager {
+    width: 400px;
+    height: 100vh;
+
+
+    .form-container {
+        background-color: map-get($colors, 'tint');
+        height: 99%;
+        flex: 0.4;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 2px 8px $box-shadow;
+        position: relative;
+
+        h2 {
+            color: map-get($colors, 'secondary');
+        }
+
+        form {
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            label {
+                color: map-get($colors, 'text-color');
+                margin-bottom: 1px;
+            }
+
+            .card-label {
+                margin-left: 5px
+            }
+
+            input {
+
+                @extend %input-alignment;
+                width: 100%;
+
+
+            }
+
+            .color-input {
+                width: 97%;
+                height: 44px;
+                padding: 5px;
+                margin-left: 6px;
+            }
+
+            .group-container {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+
+                    label {
+                        margin-bottom: 1px;
+                    }
+                }
+            }
+
+            select {
+                @extend %input-alignment;
+                height: 39px;
+                background-color: map-get($colors, 'tint');
+                padding: 0 6px;
+                color: map-get($colors, 'text-color');
+
+            }
+
+            textarea {
+                @extend %input-alignment;
+                resize: vertical;
+                height: 100px;
+
+            }
+
+            hr {
+                @extend %hr;
+            }
+
+            button {
+
+                margin-left: auto;
+                right: 20px;
+                position: absolute;
+                bottom: 18px;
+                width: fit-content;
+                background-color: map-get($colors, 'secondary');
+            }
+
+            .error {
+                margin-bottom: 0;
+
+                border: 1px solid inherit;
+                margin-bottom: 0;
+
+                width: fit-content;
+                padding: 0px 7px;
+                font-size: 13px;
+                position: absolute;
+                top: 1px;
+
+                color: map-get($colors, 'danger');
+            }
+
+            .error-handle {
+                position: relative;
+            }
+        }
+    }
+
+    @media (max-width:1024px) {
+        width: 100%;
+    }
+
+}

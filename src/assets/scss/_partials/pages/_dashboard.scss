@@ -1,0 +1,57 @@
+@use '../utils/index' as *;
+
+
+.dashboard {
+
+
+    .charts-container {
+        padding: 2px 60px;
+        position: relative;
+        background-color: map-get($colors, 'bg-color');
+
+        @media (max-width: 1024px) {
+
+            & {
+                padding: 20px;
+            }
+        }
+
+        .card-generation {
+            overflow: auto;
+
+            max-height: 261px;
+
+            scrollbar-width: none;
+
+            @media (max-width:991px) {
+                padding-right: 0;
+
+                &.item-item {
+                    padding-right: 0;
+                }
+            }
+
+            .card {
+                .buttons-container {
+                    width: 50px;
+                    visibility: hidden;
+
+                    .delete-btn {
+                        display: none;
+                    }
+
+
+                }
+
+                &:hover {
+                    .buttons-container {
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}

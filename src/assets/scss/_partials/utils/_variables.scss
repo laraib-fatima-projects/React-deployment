@@ -1,0 +1,32 @@
+$primary: #377BFD;
+$secondary: #1B308D;
+$accent: #EFF4F8;
+$tint: #FFFFFF;
+$bg-color: #EFF4F8;
+$light-white: #DEE4EB;
+$text-color: #7C858E;
+$danger: #FF0000;
+$icon-color: #464E55;
+$sidebar-text: #8994A2;
+$pagination-text: #A0AFBF;
+$border: #BACAD6;
+$box-shadow: #0000001A;
+$page-text: #2D3748;
+
+$colors: (
+    primary: $primary,
+    secondary: $secondary,
+    accent: $accent,
+    pagination-text:$pagination-text,
+    page-text:$page-text,
+
+    danger:$danger,
+    tint: $tint,
+    bg-color:$bg-color,
+    box-shadow: $box-shadow,
+    text-color: $text-color,
+    icon-color: $icon-color,
+    light-white: $light-white,
+    sidebar-text:$sidebar-text,
+    border:$border
+);

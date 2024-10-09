@@ -1,0 +1,59 @@
+@use '../utils/index' as *;
+
+.pagination-controls {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+
+    @media (max-width:991px) {
+        background-color: map-get($colors, 'tint');
+
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        padding: 0 19px;
+    }
+
+    @media (max-width:425px) {
+        select {
+            display: none;
+        }
+    }
+
+    select {
+        padding: 11px;
+        border: 1px solid map-get($colors, 'light-white');
+        background: map-get($colors, 'tint');
+        margin-left: 12px;
+        border-radius: 8px;
+    }
+
+    .items-list {
+        color: map-get($colors, 'pagination-text');
+
+        @media (max-width:991px) {
+            display: none;
+        }
+    }
+
+    .pagination-buttons .btn {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        font-size: 1.5rem;
+        color: map-get($colors, 'pagination-text');
+
+        cursor: pointer;
+    }
+
+    .pagination-buttons .btn:disabled {
+        color: map-get($colors, 'pagination-text');
+        cursor: not-allowed;
+    }
+
+    .pagination-buttons span {
+        font-size: 1.2rem;
+    }
+
+
+}
